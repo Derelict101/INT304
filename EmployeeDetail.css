@@ -1,0 +1,14 @@
+.employee-detail {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.employee-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-detail td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}

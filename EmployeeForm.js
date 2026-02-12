@@ -1,5 +1,5 @@
 import React from "react";
-import './EmployeeForm.css';
+import "./EmployeeForm.css";
 
 class EmployeeForm extends React.Component {
   constructor(props) {
@@ -17,16 +17,13 @@ class EmployeeForm extends React.Component {
 
   handleChange(event) {
     const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
+    this.setState({ [name]: value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log("Employee Data:", this.state);
+    this.props.addEmployee(this.state);
 
     this.setState({
       name: "",
@@ -39,52 +36,48 @@ class EmployeeForm extends React.Component {
   render() {
     return (
       <form className="employee-form" onSubmit={this.handleSubmit}>
-        <h1>Add Employee</h1>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-        </div>
+        <h1>New Employee</h1>
 
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-          />
-        </div>
+        <label htmlFor="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
 
-        <div>
-          <label>Job Title:</label>
-          <input
-            type="text"
-            name="title"
-            value={this.state.title}
-            onChange={this.handleChange}
-          />
-        </div>
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          value={this.state.email}
+          onChange={this.handleChange}
+        />
 
-        <div>
-          <label>Department:</label>
-          <input
-            type="text"
-            name="department"
-            value={this.state.department}
-            onChange={this.handleChange}
-          />
-        </div>
+        <label htmlFor="title">Job Title</label>
+        <input
+          id="title"
+          type="text"
+          name="title"
+          value={this.state.title}
+          onChange={this.handleChange}
+        />
 
-        <button type="submit">Submit</button>
+        <label htmlFor="department">Department</label>
+        <input
+          id="department"
+          type="text"
+          name="department"
+          value={this.state.department}
+          onChange={this.handleChange}
+        />
+
+        <button type="submit">Add Employee</button>
       </form>
     );
   }
 }
-
 
 export default EmployeeForm;

@@ -1,0 +1,32 @@
+.employee-detail {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.employee-detail h1 {
+  margin: 0 0 14px 0;
+  font-size: 22px;
+}
+
+.employee-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-detail td {
+  padding: 12px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  vertical-align: top;
+}
+
+.employee-detail td:first-child {
+  width: 170px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.employee-detail .not-found {
+  color: var(--muted);
+  padding: 10px 0;
+}

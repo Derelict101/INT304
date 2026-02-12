@@ -1,0 +1,60 @@
+.employee-list {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.employee-list h1 {
+  margin: 0 0 14px 0;
+  font-size: 22px;
+}
+
+.employee-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.employee-list li {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.employee-list li:first-child {
+  border-top: 0;
+}
+
+.employee-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background var(--speed) ease, transform var(--speed) ease;
+}
+
+.employee-list a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.employee-list a:active {
+  transform: translateY(0);
+}
+
+.employee-list a::after {
+  content: "View";
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.18);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+}
+
+.employee-list .empty {
+  color: var(--muted);
+  padding: 12px 2px;
+}
